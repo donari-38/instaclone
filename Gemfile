@@ -3,29 +3,29 @@
 source 'https://rubygems.org'
 
 gem 'coffee-rails', '4.2.2'
+gem 'html2slim'
 gem 'jbuilder',     '2.7.0'
 gem 'jquery-rails', '4.3.1'
-gem 'puma',         '3.9.1'
-gem 'rails',        '5.1.6'
-gem 'sass-rails',   '5.0.6'
+gem 'puma', '3.9.1'
+gem 'rails', '5.1.6'
+gem 'sass-rails', '5.0.6'
+gem 'slim-rails'
 gem 'turbolinks',   '5.0.1'
 gem 'uglifier',     '3.2.0'
-gem 'slim-rails'
-gem 'html2slim'
 
 group :development, :test do
-  gem 'byebug',  '9.0.6', platform: :mri
+  gem 'byebug', '9.0.6', platform: :mri
+  gem 'rspec-rails'
   gem 'sqlite3', '1.3.13'
-  gem "rspec-rails"
 end
 
 group :development do
   gem 'listen', '3.1.5'
   gem 'rubocop', '~> 0.78.0', require: false
-  gem 'spring',                '2.0.2'
-  gem 'spring-watcher-listen', '2.0.1'
-  gem 'web-console',           '3.5.1'
+  gem 'spring', '2.0.2'
   gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen', '2.0.1'
+  gem 'web-console', '3.5.1'
 end
 
 group :test do
