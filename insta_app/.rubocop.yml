@@ -1,0 +1,19 @@
+# 日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+  
+# モジュール名：：クラス名の定義を許可
+ClassAndModuleChildren:
+  Enabled: false
+  
+# クラスにコメントを残さない
+Documentation:
+  Enabled: false
+  
+# 行が長すぎる
+LineLength:
+  Enabled: false
+  
+# 
+MixinUsage:
+  Enabled: false
