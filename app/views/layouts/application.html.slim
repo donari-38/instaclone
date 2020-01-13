@@ -2,10 +2,14 @@ doctype html
 html
   head
     title
-    = full_title(yield(:title))
-      | Ruby on Rails Tutorial Sample App
+    = full_title(yield(:title)) | Ruby on Rails Tutorial Sample App
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = render 'layouts/shim'
+    
   body
+   = render 'layouts/header'
+   .container
     = yield
+    = render 'layouts/footer'
