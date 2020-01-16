@@ -2,10 +2,8 @@
 
 source 'https://rubygems.org'
 
-<<<<<<< HEAD
+
 gem 'bootstrap-sass', '3.3.7'
-=======
->>>>>>> model
 gem 'coffee-rails', '4.2.2'
 gem 'html2slim'
 gem 'jbuilder',     '2.7.0'
