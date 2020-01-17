@@ -11,12 +11,9 @@ RSpec.describe 'user signup', type: :request do
                                           password: 'password',
                                           password_confirmation: 'password' } }
     end.to change(User, :count).by(1)
-    # redirect_to @user
+    redirect_to @user
     follow_redirect!
-    assert_template 'users/new'
-    assert_select 'div#error_explanation'
-    assert_select 'div.alert'
-    assert_select 'div.alert-danger'
-    # assert is_logged_in?
+    expect(response).to render_template('users/show')
+    expect(is_logged_in?).to eq false
   end
 end
