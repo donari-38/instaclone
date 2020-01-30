@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'bcrypt', '3.1.12'
 gem 'bootstrap-sass', '3.3.7'
 gem 'coffee-rails', '4.2.2'
-gem 'devise'
 gem 'html2slim'
 gem 'jbuilder',     '2.7.0'
 gem 'jquery-rails', '4.3.1'
@@ -16,6 +15,7 @@ gem 'sass-rails', '5.0.6'
 gem 'slim-rails'
 gem 'turbolinks',   '5.0.1'
 gem 'uglifier',     '3.2.0'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', '9.0.6', platform: :mri

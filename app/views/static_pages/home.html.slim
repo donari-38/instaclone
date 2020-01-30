@@ -1,13 +1,4 @@
-- provide(:title, "Home")
-doctype html
-html
-  head
-    title
-      = yield(:title)
-      |  | Ruby on Rails Tutorial Sample App
-  body
-  
-  .center.jumbotron
+.text-center
     h1
       | Welcome to Sample App
       
@@ -17,6 +8,5 @@ html
         | Ruby on Rails Tutorial
       |  sample application. 
       
-    = link_to "Sign up now", new, .btn.btn-lg.btn-primary
-    
+    = link_to "Sign up now", new, class:"btn.btn-lg.btn-primary"
   = link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/'
