@@ -1,0 +1,20 @@
+header
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand[href=root_path]
+      | InstaApp
+      
+    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="navgation"]
+      span.navbar-toggler-icon
+    #navbar.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item.active
+          a.nav-link[href=sign_in_path]
+            | ログイン
+           
+            span.sr-only
+              | Toggle navigation
+              
+        li.nav-item
+          a.nav-link[href=sign_up_path]
+            | 新規登録
+    

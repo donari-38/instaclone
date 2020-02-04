@@ -95,14 +95,14 @@ RSpec.describe User, type: :model do
   #   end
   # end
 
-  describe 'unique' do
-    it '重複したメールアドレス ' do
-      duplicate_user = user.dup
-      duplicate_user.email = user.email.upcase
-      user.save
-      expect(duplicate_user.valid?).to eq false
-    end
-  end
+  # describe 'unique' do
+  #   it '重複したメールアドレス ' do
+  #     duplicate_user = user.dup
+  #     duplicate_user.email = user.email.upcase
+  #     user.save
+  #     expect(duplicate_user.valid?).to eq false
+  #   end
+  # end
 
   # example 'password should be present (nonblank)' do
   #   user.password = user.password_confirmation = ' ' * 6
