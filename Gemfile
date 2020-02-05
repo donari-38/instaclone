@@ -16,6 +16,7 @@ gem 'sass-rails', '5.0.6'
 gem 'slim-rails'
 gem 'turbolinks',   '5.0.1'
 gem 'uglifier',     '3.2.0'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', '9.0.6', platform: :mri

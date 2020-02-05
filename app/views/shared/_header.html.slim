@@ -17,4 +17,6 @@ header
         li.nav-item
           a.nav-link[href=sign_up_path]
             | 新規登録
-    
+        
+        - if user_signed_in?
+          li 
