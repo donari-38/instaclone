@@ -1,10 +1,13 @@
 .text-center
-    h1
-      | Welcome to Sample App
-      
-    h2
-      |  This is the home page for the 
-      a[href="https://railstutorial.jp/"]
-        | Ruby on Rails Tutorial
-      |  sample application. 
-      
+  h1
+    | Insta App
+    
+  h2
+    |  お気に入りのダンサー
+    
+  - if user_signed_in?
+    = link_to 'log out', destroy_user_session_path, :method => :delete
+  - else
+    = link_to 'sign up', new_user_registration_path
+    br
+    = link_to 'log in', new_user_session_path

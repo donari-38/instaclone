@@ -38,9 +38,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def cancel
   #   super
   # end
-  
-  def my_page
-  end
+
+  def my_page; end
 
   protected
 
@@ -58,8 +57,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-  #   super(resource)
-     my_page_path
+    #   super(resource)
+    my_page_path
   end
 
   # The path used after sign up for inactive accounts.
