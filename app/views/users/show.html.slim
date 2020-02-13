@@ -1,6 +1,11 @@
 - provide(:title, @user.name)
- .class.row
-  aside.col-md-4
-   section.user_info
-    h1
-     = @user.name
+h3
+  = @user.email
+h2 内容
+- @user.posts.each do |post|
+  a href='/posts/
+    = post.id'
+    = post.content
+  hr
+= link_to 'All user', users_path
+= link_to 'home', posts_path

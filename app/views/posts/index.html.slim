@@ -1,0 +1,21 @@
+- provide(:title, '投稿')
+
+- if user_signed_in?
+  = link_to 'log out', destroy_user_session_path, :method => :delete
+  = link_to 'my page', user_path(current_user.id)
+  h2 投稿する
+  = form_for @post do |f|
+    = f.text_field :content
+    = f.submit
+  hr
+  h2 投稿一覧
+  - @posts.each do |post|
+    a href='/users/ = post.user.id'
+      = post.user.email
+    p
+      a href='/posts/ = post.id'
+        = post.content
+        
+- else
+  = link_to 'sign up', new_user_registration_path
+  = link_to 'sign in', new_user_session_path

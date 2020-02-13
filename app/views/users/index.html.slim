@@ -1,7 +1,8 @@
-- provise(:title, 'All users')
-h1
-  | All users
-ul.users
-  - @users.each do |user|
-    li
-      = link_to user.name,user
+- provide(:title, 'All users')
+h1 All users
+- @users.each do |user|
+  a href='/users/
+    = user.id'
+    = user.email
+  hr
+= link_to 'home', posts_path

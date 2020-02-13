@@ -1,0 +1,17 @@
+h1 投稿ページ
+h3
+  = @post.user.email
+h3
+  = @post.content
+h2 コメント一覧
+- @comments.each do |c|
+  a href='/users/
+    = @post.user.id'
+    = c.user.email
+  = c.content
+  hr
+= form_for [@post, @comment] do |f|
+  = f.text_field :content
+  br
+  = f.submit 'コメント'
+= link_to 'home', posts_path
