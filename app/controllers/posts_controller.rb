@@ -3,6 +3,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: %i[show create]
   def index
+    @user = current_user
     @posts = Post.all
     @post = Post.new
   end
@@ -26,6 +27,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content)
+    params.require(:post).permit(:content, :picture, :title)
   end
 end

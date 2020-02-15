@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :posts, only: %i[index show create] do
     resources :comments, only: [:create]
   end
-  
+
   devise_scope :user do
     get 'sign_in', to: 'users/sessions#new'
     get 'sign_out', to: 'users/sessions#destroy'

@@ -4,7 +4,10 @@
   = link_to 'マイページ', user_path(current_user.id)
   h2 投稿する
   = form_for @post do |f|
+    = f.file_field :picture
+    br
     = f.text_field :content
+    br
     = f.submit
   hr
   h2 投稿一覧
@@ -14,6 +17,7 @@
     p
       a href=post_path(post.id)
         = post.content
+        = image_tag post.picture.url, :size => '300x300' unless post.picture.blank? 
         
 - else
   = link_to 'sign up', new_user_registration_path

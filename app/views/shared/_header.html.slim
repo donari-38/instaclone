@@ -19,4 +19,6 @@ header
             | 新規登録
         
         - if user_signed_in?
-          li 
+          li.nav-item
+            a.nav-link[href=sign_out_path]
+              | ログアウト
