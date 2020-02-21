@@ -6,5 +6,10 @@ h2 内容
   a href=post_path(post.id)
     = post.content
   hr
+.stats
+  = render 'shared/stats'
+  hr
+  = render 'follow_form'
+  br
 = link_to 'All user', users_path
 = link_to 'home', posts_path

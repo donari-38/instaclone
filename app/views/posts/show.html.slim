@@ -5,7 +5,7 @@ h3
   = @post.content
 h2 コメント一覧
 - @comments.each do |c|
-  a href=user_path(post.user.id)
+  a href=user_path(@post.user.id)
     = c.user.email
   = c.content
   hr

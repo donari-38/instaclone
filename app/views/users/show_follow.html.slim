@@ -1,0 +1,10 @@
+- provide(:title, @title)
+.row
+  .col-md-8
+    h2
+      = @title
+    - if @users.any?
+      - @users.each do |user|
+        = link_to gravatar_for(user), user
+      br
+        p#{user.name}

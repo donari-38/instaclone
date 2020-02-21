@@ -11,13 +11,14 @@
     = f.submit
   hr
   h2 投稿一覧
+  
   - @posts.each do |post|
     a href=user_path(post.user.id)
       = post.user.email
     p
       a href=post_path(post.id)
         = post.content
-        = image_tag post.picture.url, :size => '300x300' unless post.picture.blank? 
+          = image_tag post.picture.url 
         
 - else
   = link_to 'sign up', new_user_registration_path

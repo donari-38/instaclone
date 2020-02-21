@@ -10,10 +10,16 @@ Rails.application.routes.draw do
     conformations: 'users/conformations'
   }
 
-  resources :users, only: %i[index show]
+  resources :users, only: %i[index show] do
+    member do
+      get :following, :followers
+    end
+  end
+
   resources :posts, only: %i[index show create] do
     resources :comments, only: [:create]
   end
+  resources :relationships, only: %i[create destroy]
 
   devise_scope :user do
     get 'sign_in', to: 'users/sessions#new'
