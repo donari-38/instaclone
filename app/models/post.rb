@@ -10,11 +10,11 @@ class Post < ApplicationRecord
   # validates :user_id, presence: true
   # validates :picture, presence: true
   # validates :content, presence: true, length: { maximum: 50 }
-  # validate  :picture_size
+  validate :picture_size
 
-  # private
+  private
 
-  # def picture_size
-  #   errors.add(:picture, 'should be less than 50MB') if picture.size > 50.megabytes
-  # end
+  def picture_size
+    errors.add(:picture, 'should be less than 50MB') if picture.size > 50.megabytes
+  end
 end

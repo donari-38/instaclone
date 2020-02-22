@@ -4,7 +4,8 @@
   = link_to 'マイページ', user_path(current_user.id)
   h2 投稿する
   = form_for @post do |f|
-    = f.file_field :picture
+    = f.label :picture
+    = f.file_field :picture, accept: 'jpeg,png'
     br
     = f.text_field :content
     br
@@ -18,8 +19,15 @@
     p
       a href=post_path(post.id)
         = post.content
-          = image_tag post.picture.url 
+        = image_tag post.picture
+
+javascript:
+  $('#micropost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
         
-- else
   = link_to 'sign up', new_user_registration_path
   = link_to 'sign in', new_user_session_path
