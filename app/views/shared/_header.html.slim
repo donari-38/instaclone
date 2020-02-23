@@ -3,22 +3,16 @@ header
     a.navbar-brand[href=root_path]
       | InstaApp
       
-    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="navgation"]
+    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="navgation"]
       span.navbar-toggler-icon
-    #navbar.collapse.navbar-collapse
-      ul.navbar-nav
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
         li.nav-item.active
-          a.nav-link[href=sign_in_path]
-            | ログイン
-           
-            span.sr-only
-              | Toggle navigation
-              
+          a.nav-link[href=sign_in_path] ログイン
+
         li.nav-item
-          a.nav-link[href=sign_up_path]
-            | 新規登録
+          a.nav-link[href=sign_up_path] 新規登録
         
         - if user_signed_in?
           li.nav-item
-            a.nav-link[href=sign_out_path]
-              | ログアウト
+            a.nav-link[href=sign_out_path] ログアウト
