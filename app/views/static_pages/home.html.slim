@@ -6,6 +6,8 @@
     |  お気に入りの写真を投稿しよう！
     
   - if user_signed_in?
+    = link_to 'Home', posts_path
+    br
     = link_to 'log out', destroy_user_session_path, :method => :delete
   - else
     = link_to 'sign up', new_user_registration_path

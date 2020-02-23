@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 RSpec.describe User, type: :model do
-  # render_views # なぜかうまく通らない
+  # render_views
 
   let(:user) do
     User.new(name: 'Example User', email: 'user@example.com',
@@ -73,18 +73,18 @@ RSpec.describe User, type: :model do
   #   end
   # end
 
-  describe 'email validation should reject invalid addresses' do
-    it '無効なメールアドレス' do
-      invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
-                             foo@bar_baz.com foo@bar+baz.com]
-      invalid_addresses.each do |invalid_address|
-        user.email = invalid_address
-        # assert_not user.valid?, "#{invalid_address.inspect} should be invalid"
-        expect(user.valid?).to eq false
-        # expect("#{invalid_address.inspect} should be invalid").to eq false   うまくいかないから保留
-      end
-    end
-  end
+  # describe 'email validation should reject invalid addresses' do
+  #   it '無効なメールアドレス' do
+  #     invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
+  #                           foo@bar_baz.com foo@bar+baz.com]
+  #     invalid_addresses.each do |invalid_address|
+  #       user.email = invalid_address
+  #       # assert_not user.valid?, "#{invalid_address.inspect} should be invalid"
+  #       expect(user.valid?).to eq false
+  #       # expect("#{invalid_address.inspect} should be invalid").to eq false   うまくいかないから保留
+  #     end
+  #   end
+  # end
 
   #   test "email validation should reject invalid addresses" do
   #   invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
